@@ -1,0 +1,86 @@
+<html class="no-js">
+
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Webscraper</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700|Droid+Serif' rel='stylesheet' type='text/css'>
+ 		<link rel="stylesheet" href="/static/css/normalize.css">
+		<link rel="stylesheet" href="/static/css/main.css">
+ 		<link rel="stylesheet" href="/static/custom/css/parallax.css">
+		<script src="/static/js/modernizr-2.6.2.min.js"></script>
+
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700|Droid+Serif' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+
+		<div id="banner">
+			<div id="bannertext">
+				<h3>Dow Jones Cyber Risk</h3>
+				<h4>Breach and Target Notification</h4>
+			</div>
+			<!-- <img id="bannerlogo" src="/static/img/jira-logo-scaled.png" width = "90" height= "18">  -->
+
+		</div> <!-- end banner -->
+
+
+		<div id="content-container">
+
+			<div id="content">
+				<br>
+				<h2>Breach and Target Notification</h2>
+				<hr>
+				<p><!-- <span class="bold">Note:</span><br> -->Your watchlist should be formatted with each keyword separated by a newline.<br><br>Example:<br>Joe Smith<br>supersecretdatabase<br>clientDB93<br>plsdonthackme</p>
+				<!-- <p><span class="bold">The Information Security Manager of your company will be notified via e-mail if a possible information leak is discovered.</span></p> -->
+				<hr>
+				<h3>Watchlists</h3>
+				<form action="{% url "home" %}" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+					<div class="custom_file_upload">
+						<div class="file_upload">
+							<input type="file" name="upload"/>
+						</div>
+					</div>
+					<br>
+					<input id="button" class="btn btn-primary" type="submit" name="import" value="Submit" />
+				</form>
+				<hr>
+				<h3>Single Word Upload</h3>
+				<form action="{% url "home" %}" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					{{ userInput.keyword }}
+
+					<p><input id="button" class="btn btn-primary" type="submit" name="user_input" value="Submit" /></p>
+				</form>
+			</div> <!-- end content -->
+
+			<div id="content-logo">
+				<div id="bannertext-logo">
+					<h3>Upload watchlist data</h3>
+				</div>
+			</div>
+
+			<div id = "content-footer">
+				<div id="content-footer-inner">
+					<img src="/static/img/jira-logo-scaled.png" width = "200" height= "40"> 
+<!-- 					<img src="/static/img/djlogo.gif" width = "200" height= "30"> 
+ -->
+				</div>
+			</div> <!-- end container-footer -->
+
+		</div> <!-- end content-container -->
+
+		<script src="/static/js/jquery-ui-1.10.3.custom.js"></script>
+		<script src="/static/js/jquery-2.0.3.js"></script>
+		<script src="/static/custom/javascript/parallax.js"></script>
+		<script src="/static/js/plugins.js"></script>
+		<script src="/static/js/main.js"></script>
+	</body>
+
+</html>
+
+
+

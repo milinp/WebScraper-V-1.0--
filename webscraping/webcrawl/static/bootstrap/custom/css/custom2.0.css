@@ -1,0 +1,172 @@
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+body, html { font-size: 100%; padding: 0; margin: 0; height: 100%;}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	color: #89867e;
+	background: #fff;
+}
+
+a {
+	color: #888;
+	text-decoration: none;
+}
+
+h1{
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+a:hover,
+a:active {
+	color: #333;
+}
+
+ul{
+	list-style-type: none;
+}
+
+li {
+	display: inline-block;
+}
+
+.center{
+	position: absolute;
+	left: 47.5%;
+}
+
+/* underlining css */
+
+#underline{
+	opacity: 0;
+	display:block;
+	height: .5px;
+	width: 20%;	
+	margin: 0 auto;
+	background:#89867e;
+	position:relative;
+}
+
+h1:hover ~ #underline {
+	opacity: 1;
+	width: 80%;
+	height:1px;
+	-webkit-transition: 0.2s ease-out;
+	transition: 0.2s ease-out;
+}
+
+/* Top Frame Section*/
+#scrape{
+	position: absolute;
+	top: 35%;
+	left: 47.5%;
+}
+
+.top {
+	background: #F16529;
+	color: #fff;
+	height: 80%;
+	width: 100%;
+}
+
+.justify-top ul{
+	height: 10%;
+	padding-top: 20em;
+	text-align: center;
+}
+
+/* Bottom Frame Section */
+#match{
+	position: absolute;
+	top: 115%;
+	left: 47.5%;
+}
+
+.bottom {
+	background: #0e83cd;
+	color: #fff;
+	height: 90%;
+	width: 100%;
+}
+
+.justify-bottom{
+	height: 10%;
+	padding-top: 20em;
+	text-align: center;
+}
+
+/* Header & Footer Style */
+.title{
+	float: left;
+	text-align: justify;
+}
+
+.nav ul{
+	float: right;
+	padding-top: 2.5%;
+	list-style-type: none;
+}
+
+.nav li {
+	padding: 0 3em 0 1em;
+	display: inline-block;
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;	
+}
+
+.nav li:hover {
+	color: black;
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
+}
+
+.container > footer {
+	margin: 0 auto;
+	padding: 2em;
+	height: 10%;
+}
+
+.main,
+.container > header {
+	margin: 0 auto;
+	padding: 2em;
+	height: 20%;
+}
+
+.container > header,
+.container > footer {
+	text-align: center;
+}
+
+.container > footer h1{
+	font-size: 2em;
+	line-height: .25em;
+	margin: 0;
+	font-weight: 300;
+}
+
+.container > header h1 {
+	font-size: 2.625em;
+	line-height: 1.3;
+	margin: 0;
+	font-weight: 300;
+}
+
+.container > header span,
+.container > footer span {
+	display: block;
+	font-size: 60%;
+	opacity: 0.5;
+}
+.container {
+	height: 100%;
+	position: relative;
+}

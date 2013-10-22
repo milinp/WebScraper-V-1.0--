@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.webServer>
+    <handlers>
+	  <clear/>
+      <add name="FastCGI" path="*" verb="*" modules="FastCgiModule" scriptProcessor="c:\python27\python.exe|c:\Users\Administrator\Desktop\test\sohail\webscraping\webcrawl_user\manage.py winfcgi --pythonpath=c:\Users\Administrator\Desktop\test\sohail\webscraping\webcrawl_user" resourceType="Unspecified" requireAccess="Script" />
+    </handlers>
+  </system.webServer>
+</configuration>

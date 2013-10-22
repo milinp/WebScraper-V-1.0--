@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Watchman</title>
+		<link rel="stylesheet" type="text/css" href="/static/custom/css/custom2.0.css" />
+		<link rel="stylesheet" type="text/css" href="/static/custom/css/buttons.css" />
+
+	
+		</head>
+	<body>
+		<div class="container">
+			<!-- Top Navigation -->
+			<header>
+				<div class="title">
+					<h1>Dow Jones Cyber Risk<span>Watchman</span></h1>
+				</div>
+				<div class="nav">
+					<ul>
+						<li>
+							<h1><span>Scrape</span></h1>
+							<span id = "underline"></span>
+						</li>
+						<li>
+							<h1><span>Match</span></h1>
+							<span id = "underline"></span>
+						</li>
+						<li>
+							<h1><span>Settings</span></h1>
+							<span id = "underline"></span>
+						</li>
+					</ul>
+				</div>	
+			</header>
+			<div class="top">
+				<div id = "scrape">
+					<h1>Scrape</h1>
+				</div>
+				<div class = "justify-top">
+					<ul>
+						<li>
+							<form>
+								{% csrf_token %}
+								<button class="btn btn-7 btn-2e" type="submit" formmethod="post" formaction="/" name="run_scraper_pastebin">Pastebin</button>
+							</form>
+						</li>
+						<li>
+							<form>
+								{% csrf_token %}
+								<button class="btn btn-7 btn-2e" type="submit" formmethod="post" formaction="/" name="run_scraper_pastie">Pastie</button>
+							</form>
+						</li>
+						<li>
+							<form>
+								{% csrf_token %}
+								<button class="btn btn-7 btn-2e" type="submit" formmethod="post" formaction="/" name="stop_scraper">Stop</button>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="bottom">
+				<div id = "match">
+					<h1>Match</h1>
+				</div>
+				<div class = "justify-bottom">
+					<ul>
+						<li>
+							<form>
+								{% csrf_token %}
+								<button class="btn btn-8 btn-1e" type="submit" formmethod="post" formaction="/watchlist/" name="import" >Upload</button>
+							</form>
+						</li>
+						<li>
+							<form>
+								{% csrf_token %}
+								<button class="btn btn-8 btn-1e" type="submit" formmethod="post" formaction="/watchlist/" name="match">Match</button>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<footer>
+				<div class = "center">
+					<h1>Logout</h1>
+				</div>
+			</footer>
+		</div><!-- /container -->
+
+        <script src="/static/jquery/jquery-2.0.2.js"></script>
+        <script src="/static/custom/javascript/custom.js"></script>
+		
+	</body>
+</html>

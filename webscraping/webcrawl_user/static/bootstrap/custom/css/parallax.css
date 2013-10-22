@@ -1,0 +1,165 @@
+html, body{
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  height: 100%;
+}
+
+body { 
+  font-size: 13px;
+  background: #FFF; 
+  font: 400 1.5em/1.5 "Droid Serif", serif; 
+  color: #111; 
+  text-align: center; 
+  position: absolute; 
+  height: 100%; 
+  width: 100%; 
+}
+
+h1 { font-weight: 700; 
+  font-family: "Droid Serif", 
+  sans-serif; font-size: 2.8em; 
+  line-height: 1.2; 
+}
+h2 { 
+  font-weight: 700; 
+  font-size: 1.5em; 
+  font-family: "Droid Serif", sans-serif; 
+  margin: 0 0; 
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-family: "Droid Serif";
+  font-size: 20px;
+}
+a:hover{
+  text-decoration: underline
+}
+
+#banner { 
+  background: url(/static/img/camera.jpg) no-repeat fixed 100% 0; 
+  background-size: cover; 
+  color: #fff; 
+  height: 100%; 
+  width: 100%; 
+  overflow: hidden; 
+}
+
+#bannerlogo{
+  position:absolute;
+  top: 70%;
+  left: 47%;
+}
+
+#bannertext { 
+  width: 20em; 
+  position: absolute; 
+  top: 35%; 
+  left: 54%; 
+  border: .25em solid #fff;
+  margin-left: -12em; 
+  padding: 0 0; 
+  -moz-transition: all .2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#bannertext:after{
+  content:'';
+  display:inline;
+  position:absolute;
+  top:100%; /*should be set to 100% */
+  left: 42.5%;
+  width:0;
+  height:1;
+  border-color: white transparent transparent transparent; /*border color should be same as div div background color*/
+  border-style: solid;
+  border-width: 30px;
+}
+
+#content {
+  background:white;
+  color: black; 
+  text-align: justify;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 90%;
+  width: 30%;
+  font-size:15px;
+  float:left;
+}
+
+#content-container{
+  background: url(/static/img/blue.jpg) no-repeat 100% 50%; 
+  height: 100%;
+}
+
+#content-logo{
+  height: 90%;
+  width: 60%; 
+}
+
+#bannertext-logo { 
+  opacity:0;
+  position:absolute;
+  color: #fff;
+  height: 10%;
+  width: 30%;
+  top: 135%; 
+/*  left: 52.5%; */ 
+  left: 20%;
+  border: .25em solid #fff;
+  padding: 0 1em 1em 1em;
+  -moz-transition: all .2s;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+#bannertext-logo:after{
+  content:'';
+  display:inline;
+  position:absolute;
+  top:30%; /*should be set to 100% */
+  right: 101%;
+  width:0;
+  height:1;
+  border-color: white transparent transparent transparent; /*border color should be same as div div background color*/
+  border-style: solid;
+  border-width: 20px;
+ -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+#content-footer{
+  background: #F16529;
+  height:10%;
+  width: 40%;
+  clear:left;
+  float:left;
+  text-align:center;
+}
+
+#content-footer-inner{
+  text-align: center;
+  padding-top: 3%;
+}
+
+.bold{
+  font-weight:bold;
+}
+
+.shadow {
+  -moz-box-shadow: 0 0 20px #fff;
+  -webkit-box-shadow: 0 0 20px #fff;
+  box-shadow: 0px 0px 20px #fff;
+  -webkit-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -kthtml-transition: all 1s linear;
+  transition: all 1s linear;
+}
